@@ -33,6 +33,18 @@ $products = [
 
 if(isset($_POST['submit'])){
 
+    //Variables
+
+    $email = $_POST['email'];
+    $street = $_POST['street'];
+    $streetNumber = $_POST['streetnumber'];
+    $city = $_POST['city'];
+    $zipCode = $_POST['zipcode'];
+
+    $adress = $street . " " . $streetNumber . " in " . $zipCode . " " . $city;
+    
+    echo "Your order will be delivered to: " . $adress;
+
     if($products['Mushy Lime'] == 'Yes'){
         echo "You ordered a mushy lime";
     }

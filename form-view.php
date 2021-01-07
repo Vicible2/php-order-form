@@ -60,7 +60,8 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="email">E-mail:</label>
-                    <input type="text" id="email" name="email" class="form-control" />
+                    <input type="text" id="email" name="email" placeholder="FunnyGuy@gmail.com ..."
+                        class="form-control" />
                 </div>
                 <div></div>
             </div>
@@ -71,21 +72,23 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="street">Street:</label>
-                        <input type="text" name="street" id="street" class="form-control">
+                        <input type="text" name="street" placeholder="Sesamestreet ..." id="street"
+                            class="form-control">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="streetnumber">Street number:</label>
-                        <input type="text" id="streetnumber" name="streetnumber" class="form-control">
+                        <input type="text" id="streetnumber" name="streetnumber" placeholder="14 ..."
+                            class="form-control">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="city">City:</label>
-                        <input type="text" id="city" name="city" class="form-control">
+                        <input type="text" id="city" name="city" placeholder="Lazytown ..." class="form-control">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="zipcode">Zipcode</label>
-                        <input type="text" id="zipcode" name="zipcode" class="form-control">
+                        <input type="text" id="zipcode" name="zipcode" placeholder="1500 ..." class="form-control">
                     </div>
                 </div>
             </fieldset>
@@ -104,7 +107,8 @@
             <button type="submit" name="submit" class="btn btn-primary">Order!</button>
         </form>
 
-        <footer class="mb-3">You already ordered <strong>&euro; <?php echo $totalValue ?></strong> in food and drinks.</footer>
+        <footer class="mb-3">You already ordered <strong>&euro; <?php echo $totalValue ?></strong> in food and drinks.
+        </footer>
     </div>
 
     <style>
