@@ -31,6 +31,13 @@ $products = [
 
 ];
 
+if(isset($_POST['submit'])){
+
+    if($products['Mushy Lime'] == 'Yes'){
+        echo "You ordered a mushy lime";
+    }
+      echo "You have ordered!";
+}
 $totalValue = 0;
 
 require 'form-view.php';

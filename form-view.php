@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm mb-3">
+    <nav class="navbar navbar-expand-lg py-2 navbar-dark bg-dark shadow-sm mb-3 sticky-top">
         <div class="container brandHeader">
             <a href="#" class="navbar-brand logobar">
                 <!-- Logo Image -->
@@ -101,10 +101,10 @@
                 <?php endforeach; ?>
             </fieldset>
 
-            <button type="submit" class="btn btn-primary">Order!</button>
+            <button type="submit" name="submit" class="btn btn-primary">Order!</button>
         </form>
 
-        <footer>You already ordered <strong>&euro; <?php echo $totalValue ?></strong> in food and drinks.</footer>
+        <footer class="mb-3">You already ordered <strong>&euro; <?php echo $totalValue ?></strong> in food and drinks.</footer>
     </div>
 
     <style>
