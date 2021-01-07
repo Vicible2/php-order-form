@@ -45,10 +45,11 @@ if(isset($_POST['submit'])){
     
     echo "Your order will be delivered to: " . $adress;
 
-    if($products['Mushy Lime'] == 'Yes'){
-        echo "You ordered a mushy lime";
+    if(isset($_POST[$products])) {
+
+    } else {
+        echo "please pick an item";
     }
-      echo "You have ordered!";
 }
 $totalValue = 0;
 
