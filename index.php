@@ -61,7 +61,9 @@ if (!empty($_POST['products'])) {
     echo '<div class="alert alert-warning alert-dismissible">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Ordered items:</strong> <br>
-    ' . $products[$product] .'  </div>';
+    ' . $product . '  </div>';
+
+    //echo array_sum($products['price'] ); -> bugs page to white page
  }
 }
     
