@@ -34,7 +34,6 @@ $products = [
 if(isset($_POST['submit'])){
 
     //Variables
-
     $email = $_POST['email'];
     $street = $_POST['street'];
     $streetNumber = $_POST['streetnumber'];
@@ -45,11 +44,11 @@ if(isset($_POST['submit'])){
     
     echo "Your order will be delivered to: " . $adress;
 
-    if(isset($_POST[$products])) {
-
-    } else {
-        echo "please pick an item";
-    }
+    /*
+    If $products[$i] == yes -> add up value of $products['price'], 
+    if $product['$i'] == yes -> add $products['name'] to order confirm (with billing adress)
+    */
+   
 }
 $totalValue = 0;
 
