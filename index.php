@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
 
     $adress = $street . " " . $streetNumber . " in " . $zipCode . " " . $city;
     
-    echo '<div class="alert alert-success alert-dismissible">
+    echo '<div class="alert align-middle alert-success alert-dismissible">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>SubLime!</strong> Your order has been confirmed, and the following items will be delivered to: ' . $adress . '
   </div>';
@@ -55,10 +55,18 @@ if(isset($_POST['submit'])){
     if $product['$i'] == yes -> add $products['name'] to order confirm (with billing adress)
     */
    
+if (!empty($_POST['products'])) {
+    
+    foreach($products as $product) {
+    echo '<div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Ordered items:</strong> <br>
+    ' . $products[$product] .'  </div>';
+ }
+}
+    
 
-    foreach ($products as $i => $product) {
-
-    }
+    
 
 }
 $totalValue = 0;
