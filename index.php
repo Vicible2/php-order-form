@@ -1,5 +1,7 @@
 <?php
 
+
+
 // This file is your starting point (= since it's the index)
 // It will contain most of the logic, to prevent making a messy mix in the html
 
@@ -19,6 +21,7 @@ function whatIsHappening() {
     var_dump($_COOKIE);
     echo '<h2>$_SESSION</h2>';
     var_dump($_SESSION);
+    
 }
 
 // TODO: provide some products (you may overwrite the example)
@@ -42,13 +45,21 @@ if(isset($_POST['submit'])){
 
     $adress = $street . " " . $streetNumber . " in " . $zipCode . " " . $city;
     
-    echo "Your order will be delivered to: " . $adress;
+    echo '<div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>SubLime!</strong> Your order has been confirmed, and the following items will be delivered to: ' . $adress . '
+  </div>';
 
     /*
     If $products[$i] == yes -> add up value of $products['price'], 
     if $product['$i'] == yes -> add $products['name'] to order confirm (with billing adress)
     */
    
+
+    foreach ($products as $i => $product) {
+
+    }
+
 }
 $totalValue = 0;
 
