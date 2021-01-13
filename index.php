@@ -64,9 +64,22 @@ function validate() {
 // ];
 
 
-$product = new Product;
-$product->name = 'Mushy Lime';
-$product->price = 5.50;
+$product1 = new Product;
+$product1-> setNewProduct("Mushy Lime", 1.50);
+
+$product2 = new Product;
+$product2-> setNewProduct("Moldy Lime", 3.50);
+
+$product3 = new Product;
+$product3-> setNewProduct("Dried out Lime Seeds", 2.50);
+
+$product4 = new Product;
+$product4-> setNewProduct("Rotten Lime", 4.50);
+
+$product5 = new Product;
+$product5-> setNewProduct("Premium untouched Lime!", 9.99);
+
+
 //array of products
 $products =  [
     $product
