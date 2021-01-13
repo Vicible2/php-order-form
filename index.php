@@ -1,12 +1,12 @@
 <?php
 
 
-
 // This file is your starting point (= since it's the index)
 // It will contain most of the logic, to prevent making a messy mix in the html
 
 // This line makes PHP behave in a more strict way
 declare(strict_types=1);
+
 
 // We are going to use session variables so we need to enable sessions
 session_start();
@@ -60,6 +60,28 @@ $products = [
     4 => ['name' => 'Premium: untouched Lime!', 'price' => 8.99],
 
 ];
+
+//Default Product blueprint (with class)
+class Product
+{
+    var $name;
+    var $price;
+}
+
+//Create first product instance
+$mushyLime = new Product;
+
+//Set properties first product
+$mushyLime->name = 'Mushy Lime';
+$mushyLime->price =
+
+//Create second product instance
+$moldyLime = new Product;
+
+//Set properties second product
+$moldyLime->name = 'Moldy Lime';
+$moldyLime->price = '3.50';
+
 
 /*if(isset($_POST['submit'])){
 
