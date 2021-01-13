@@ -88,8 +88,10 @@ $products =  [
     $product4,
     $product5,
 ];
-
-var_dump($products[0]->price);
+foreach($products as $product) {
+    var_dump($product->price);
+}
+var_dump($products[2]->price);
 
 
 
