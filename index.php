@@ -53,11 +53,11 @@ function validate() {
 
 // TODO: provide some products (you may overwrite the example)
 $products = [
-    ['name' => 'Mushy Lime', 'price' => 1.50],
-    ['name' => 'Moldy Lime', 'price' => 3.50],
-    ['name' => 'Dried out lime seeds', 'price' => 2.50],
-    ['name' => 'Rotten lime', 'price' => 4.50],
-    ['name' => 'Premium: untouched Lime!', 'price' => 8.99],
+    0 => ['name' => 'Mushy Lime', 'price' => 1.50],
+    1 => ['name' => 'Moldy Lime', 'price' => 3.50],
+    2 => ['name' => 'Dried out lime seeds', 'price' => 2.50],
+    3 => ['name' => 'Rotten lime', 'price' => 4.50],
+    4 => ['name' => 'Premium: untouched Lime!', 'price' => 8.99],
 
 ];
 
@@ -82,7 +82,17 @@ $products = [
     if $product['$i'] == yes -> add $products['name'] to order confirm (with billing adress)
     */
    
+if (!empty($_POST['products'])) {
+    
+    foreach($products as $product) {
+    echo '<div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Ordered items:</strong> <br>
+    ' . $product['name'] . '  </div>';
 
+    //echo array_sum($products['price'] ); -> bugs page to white page
+ }
+}
     
 
     
