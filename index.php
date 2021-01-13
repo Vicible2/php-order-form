@@ -4,8 +4,10 @@
 // It will contain most of the logic, to prevent making a messy mix in the html
 
 // This line makes PHP behave in a more strict way
-declare(strict_types=1);
-
+//declare(strict_types=1);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 // We are going to use session variables so we need to enable sessions
 session_start();
 
@@ -24,7 +26,7 @@ function whatIsHappening() {
     
 }
 
-whatIsHappening();
+//whatIsHappening();
 
 
 function validateRequiredFields() {
@@ -52,35 +54,29 @@ function validate() {
 
 
 // TODO: Create classes for products (you may overwrite the example)
-$products = [
-    0 => ['name' => 'Mushy Lime', 'price' => 1.50],
-    1 => ['name' => 'Moldy Lime', 'price' => 3.50],
-    2 => ['name' => 'Dried out lime seeds', 'price' => 2.50],
-    3 => ['name' => 'Rotten lime', 'price' => 4.50],
-    4 => ['name' => 'Premium: untouched Lime!', 'price' => 8.99],
+// $products = [
+//     0 => ['name' => 'Mushy Lime', 'price' => 1.50],
+//     1 => ['name' => 'Moldy Lime', 'price' => 3.50],
+//     2 => ['name' => 'Dried out lime seeds', 'price' => 2.50],
+//     3 => ['name' => 'Rotten lime', 'price' => 4.50],
+//     4 => ['name' => 'Premium: untouched Lime!', 'price' => 8.99],
 
+// ];
+
+
+$product = new Product;
+$product->name = 'Mushy Lime';
+$product->price = 5.50;
+//array of products
+$products =  [
+    $product
 ];
 
-//Default Product blueprint (with class)
-class Product
-{
-    var $name;
-    var $price;
-}
+var_dump($products[0]->price);
 
-//Create first product instance
-$mushyLime = new Product;
 
-//Set properties first product
-$mushyLime->name = 'Mushy Lime';
-$mushyLime->price =
 
-//Create second product instance
-$moldyLime = new Product;
 
-//Set properties second product
-$moldyLime->name = 'Moldy Lime';
-$moldyLime->price = '3.50';
 
 
 /*if(isset($_POST['submit'])){
@@ -104,17 +100,17 @@ $moldyLime->price = '3.50';
     if $product['$i'] == yes -> add $products['name'] to order confirm (with billing adress)
     */
    
-if (!empty($_POST['products'])) {
+// if (!empty($_POST['products'])) {
     
-    foreach($products as $product) {
-    echo '<div class="alert alert-warning alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Ordered items:</strong> <br>
-    ' . $product['name'] . '  </div>';
+//     foreach($products as $product) {
+//     echo '<div class="alert alert-warning alert-dismissible">
+//     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+//     <strong>Ordered items:</strong> <br>
+//     ' . $product['name'] . '  </div>';
 
-    //echo array_sum($products['price'] ); -> bugs page to white page
- }
-}
+//     //echo array_sum($products['price'] ); -> bugs page to white page
+//  }
+// }
     
 
     
