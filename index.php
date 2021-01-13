@@ -34,6 +34,20 @@ function validateRequiredFields() {
             $isOkay = false;
         }
     }
+    return $isOkay;
+}
+
+function validate() {
+    $formCorrect = true;
+
+    if (!validateRequiredFields()) {
+        $formCorrect = false;
+    }
+
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $formCorrect = false;
+    }
+    return $formCorrect;
 }
 
 
@@ -47,7 +61,7 @@ $products = [
 
 ];
 
-if(isset($_POST['submit'])){
+/*if(isset($_POST['submit'])){
 
     //Variables
     $email = $_POST['email'];
@@ -63,27 +77,17 @@ if(isset($_POST['submit'])){
     <strong>SubLime!</strong> Your order has been confirmed, and the following items will be delivered to: ' . $adress . '
   </div>';
 
-    /*
+    
     If $products[$i] == yes -> add up value of $products['price'], 
     if $product['$i'] == yes -> add $products['name'] to order confirm (with billing adress)
     */
    
-if (!empty($_POST['products'])) {
-    
-    foreach($products as $product) {
-    echo '<div class="alert alert-warning alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Ordered items:</strong> <br>
-    ' . $product . '  </div>';
 
-    //echo array_sum($products['price'] ); -> bugs page to white page
- }
-}
     
 
     
 
-}
+
 $totalValue = 0;
 
 require 'form-view.php';
