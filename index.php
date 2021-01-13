@@ -82,7 +82,11 @@ $product5-> setNewProduct("Premium untouched Lime!", 9.99);
 
 //array of products
 $products =  [
-    $product
+    $product1,
+    $product2,
+    $product3,
+    $product4,
+    $product5,
 ];
 
 var_dump($products[0]->price);
