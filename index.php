@@ -1,15 +1,15 @@
 <?php
 
-
 // This file is your starting point (= since it's the index)
 // It will contain most of the logic, to prevent making a messy mix in the html
 
 // This line makes PHP behave in a more strict way
 declare(strict_types=1);
 
-
 // We are going to use session variables so we need to enable sessions
 session_start();
+
+require 'classes/products.php';
 
 // Use this function when you need to need an overview of these variables
 function whatIsHappening() {
@@ -51,7 +51,7 @@ function validate() {
 }
 
 
-// TODO: provide some products (you may overwrite the example)
+// TODO: Create classes for products (you may overwrite the example)
 $products = [
     0 => ['name' => 'Mushy Lime', 'price' => 1.50],
     1 => ['name' => 'Moldy Lime', 'price' => 3.50],
