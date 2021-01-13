@@ -24,6 +24,19 @@ function whatIsHappening() {
     
 }
 
+whatIsHappening();
+
+
+function validateRequiredFields() {
+    $isOkay = true;
+    foreach($_POST as $field => $value) {
+        if(empty($value)) {
+            $isOkay = false;
+        }
+    }
+}
+
+
 // TODO: provide some products (you may overwrite the example)
 $products = [
     ['name' => 'Mushy Lime', 'price' => 1.50],
