@@ -132,9 +132,14 @@ var_dump($products[2]->price);
 // }
     
 
-    
+$orderedProducts = [];
+foreach($_POST['products'] as $productindex) {
+    $orderedProducts = $products[$productIndex];
+}
 
 
-$totalValue = 0;
+foreach($orderedProducts as $product) {
+   return $product->price;
+};
 
 require 'form-view.php';
